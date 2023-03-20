@@ -6,12 +6,15 @@ node {
     stage('Environment') {
       sh 'git --version'
       echo "Branch: ${env.BRANCH_NAME}"
-//       sh 'docker -v'
+      sh 'npm --version'
       sh 'printenv'
     }
     stage('Deploy'){
 //       if(env.BRANCH_NAME == 'main'){
         sh 'echo "Deploying to production"'
+        sh 'npm install'
+        sh 'npm run build'
+        sh 'ls -la ./build'
 //       }
     }
   }
