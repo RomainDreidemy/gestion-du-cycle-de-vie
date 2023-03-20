@@ -1,5 +1,9 @@
 node {
   try {
+     agent any
+
+     tools {nodejs "nodejs"}
+
     stage('Checkout') {
       checkout scm
     }
