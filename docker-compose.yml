@@ -2,6 +2,7 @@ version: '3'
 
 services:
   node:
+    container_name: node
     build:
       context: .
       dockerfile: Dockerfile
@@ -9,4 +10,4 @@ services:
       - "3000:3000"
     volumes:
       - .:/usr/app
-    entrypoint: ["tail", "-f", "/dev/null"]
+    entrypoint: ["npm", "start"]
