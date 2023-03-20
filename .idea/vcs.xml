@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jenkins_home/workspace/react-app_Main@script/42a7d260f06ce973df3380332bcee11d7941a21cbc777f3bb7575629e4302cad" vcs="Git" />
   </component>
 </project>

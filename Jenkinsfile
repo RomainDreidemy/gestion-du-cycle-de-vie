@@ -1,22 +1,21 @@
-pipeline {
-  agent {
-    node {
-      label 'ls'
+node {
+  try {
+    stage('Checkout') {
+      checkout scm
     }
-
+    stage('Environment') {
+      sh 'git --version'
+      echo "Branch: ${env.BRANCH_NAME}"
+      sh 'docker -v'
+      sh 'printenv'
+    }
+    stage('Deploy'){
+//       if(env.BRANCH_NAME == 'main'){
+        sh 'echo "Deploying to production"'
+//       }
+    }
   }
-  stages {
-    stage('Build') {
-      agent {
-        node {
-          label 'node'
-        }
-
-      }
-      steps {
-        sh 'ls -la'
-      }
-    }
-
+  catch (err) {
+    throw err
   }
 }
