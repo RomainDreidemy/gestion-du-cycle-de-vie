@@ -14,7 +14,7 @@ node {
         sh 'echo "Deploying to production"'
         sh 'npm install'
         sh 'npm run build'
-        sh 'ls -la ./build'
+        sh 'ls -la ./build '
 //       }
     }
   }
