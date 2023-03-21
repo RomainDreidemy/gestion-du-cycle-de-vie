@@ -1,10 +1,10 @@
 import './App.css';
-import Square from "./views/atoms/square.atom";
+import Board from "./views/molecules/board.molecule";
 
 function App() {
   return (
     <div className="App">
-      <Square />
+      <Board />
     </div>
   );
 }
