@@ -49,3 +49,7 @@ nos critères de révision étaient remplis.
 ### Appareance du board
 
 Avec la pr `feat/board-logic`, nous implémentons juste l'appareance et la logique front du click sur une case. 
+
+### Logic des tours
+
+Avec la pr `feat/board-turn`, nous implémentons la logique des `x` et des `o`.
