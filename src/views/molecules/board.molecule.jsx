@@ -1,22 +1,17 @@
 import Square from "../atoms/square.atom";
-import {useState} from "react";
 
-const Board = () => {
-    const [xIsNext, setXIsNext] = useState(true);
-    const [squares, setSquares] = useState(Array(9).fill(null));
-
+const Board = ({ xIsNext, squares, onPlay }) => {
     function handleClick(i) {
-        if (squares[i] || calculateWinner(squares)) {
+        if (calculateWinner(squares) || squares[i] || calculateWinner(squares)) {
             return;
         }
         const nextSquares = squares.slice();
         if (xIsNext) {
-            nextSquares[i] = "X";
+            nextSquares[i] = 'X';
         } else {
-            nextSquares[i] = "O";
+            nextSquares[i] = 'O';
         }
-        setSquares(nextSquares);
-        setXIsNext(!xIsNext);
+        onPlay(nextSquares);
     }
 
     const winner = calculateWinner(squares);
@@ -30,7 +25,6 @@ const Board = () => {
     return (
         <>
             <h1 className="status">{status}</h1>
-
             <div className="board-row">
                 <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
                 <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -48,7 +42,8 @@ const Board = () => {
             </div>
         </>
     );
-};
+}
+
 
 function calculateWinner(squares) {
     const lines = [
@@ -59,7 +54,7 @@ function calculateWinner(squares) {
         [1, 4, 7],
         [2, 5, 8],
         [0, 4, 8],
-        [2, 4, 6]
+        [2, 4, 6],
     ];
     for (let i = 0; i < lines.length; i++) {
         const [a, b, c] = lines[i];
@@ -69,7 +64,5 @@ function calculateWinner(squares) {
     }
     return null;
 }
-
-Board.propTypes = {};
 
 export default Board;
