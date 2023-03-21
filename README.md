@@ -30,8 +30,6 @@ Cette pull request doit:
 
 ### Ajouter du code sur main
 
-Il est impossible de pousser du code directement sur cette branche.
-
 Pour ajouter du code sur la branche de production, il faut créer une pull request de `dev` vers `main`.
 Une pull request non valide ne peut pas être mergée.
 
