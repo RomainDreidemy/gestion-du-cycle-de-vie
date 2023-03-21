@@ -1,10 +1,10 @@
 import './App.css';
-import Board from "./views/molecules/board.molecule";
+import Game from "./views/organisms/game.organism";
 
 function App() {
   return (
     <div className="App">
-      <Board />
+      <Game />
     </div>
   );
 }

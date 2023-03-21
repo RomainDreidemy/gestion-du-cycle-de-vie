@@ -57,3 +57,8 @@ Avec la pr `feat/board-turn`, nous implémentons la logique des `x` et des `o`.
 ### Définir un gagnant
 
 Avec la pr `feat/game_winner`, nous implémentons juste la logique permettant de gagner ou de perdre.
+
+### Structure du jeu
+
+Avec la pr `feat/game-history`, nous implémentons la logique de la logique des historiques des tours tout en
+nettoyant la codebase actuellement.
