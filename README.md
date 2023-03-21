@@ -45,3 +45,7 @@ branche appelée fix/board à partir de dev qui était à jour, pour y apporter 
 
 Une fois cette action réalisée, nous avons créé une pull request vers la branche dev en vérifiant que tous
 nos critères de révision étaient remplis.
+
+### Appareance du board
+
+Avec la pr `feat/board-logic`, nous implémentons juste l'appareance et la logique front du click sur une case. 

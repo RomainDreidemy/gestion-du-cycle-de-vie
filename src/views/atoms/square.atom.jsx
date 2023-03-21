@@ -1,11 +1,9 @@
-import PropTypes from "prop-types";
-
-const Square = ({value}) => {
-    return <button className="square">{value}</button>;
+const Square = ({value, onSquareClick}) => {
+    return <button className="square"
+                   style={{width: 50, height: 50}}
+                   onClick={onSquareClick}>
+        {value}
+    </button>;
 }
-
-Square.propTypes = {
-    value: PropTypes.number.isRequired
-};
 
 export default Square;
