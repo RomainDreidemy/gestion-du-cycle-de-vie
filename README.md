@@ -36,3 +36,12 @@ Cette pull request doit:
 - avoir toutes les conversations résolues
 - avoir tous les checks en success
 - avoir un déploiment en success
+
+### Etape 6
+
+Ayant un composant avec des props non utilisées ainsi qu'une erreur au niveau du children,
+nous sommes partis de la branche dev pour corriger cela. Nous avons donc créé une nouvelle 
+branche appelée fix/board à partir de dev qui était à jour, pour y apporter les modifications nécessaires.
+
+Une fois cette action réalisée, nous avons créé une pull request vers la branche dev en vérifiant que tous
+nos critères de révision étaient remplis.
