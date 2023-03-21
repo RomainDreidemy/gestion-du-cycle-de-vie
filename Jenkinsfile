@@ -1,22 +1,20 @@
 pipeline {
-  agent {
-    node {
-      label 'ls'
-    }
-
-  }
-  stages {
-    stage('Build') {
-      agent {
-        node {
-          label 'node'
+    agent {
+        docker {
+            image 'node:alpine'
         }
-
-      }
-      steps {
-        sh 'ls -la'
-      }
     }
 
-  }
+    stages {
+        if(env.BRANCH_NAME == 'main'){
+            stage('Build') {
+                steps {
+                    sh 'npm -v'
+                    sh 'npm install'
+                    sh 'npm run build'
+                    sh 'ls -la ./build'
+                }
+            }
+        }
+    }
 }
